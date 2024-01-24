@@ -15,5 +15,5 @@ export async function POST(req: NextRequest) {
         age: 18
     }
   });
-  return NextResponse.json(pilote);
+  return NextResponse.json({ pilote });
 }
