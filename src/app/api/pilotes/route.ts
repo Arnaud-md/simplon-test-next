@@ -12,7 +12,20 @@ export async function POST(req: NextRequest) {
   const pilote = await prisma.pilote.create({
     data: {
         name: "test",
-        age: 18
+        age: 18,
+        nbCourses: 0,
+    }
+  });
+  return NextResponse.json({ pilote });
+}
+
+export async function PUT(req: NextRequest) {
+  const pilote = await prisma.pilote.update({
+    where: { id: 1 },
+    data: {
+        name: "toto",
+        age: 18,
+        nbCourses: 2
     }
   });
   return NextResponse.json({ pilote });

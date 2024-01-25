@@ -11,7 +11,7 @@ export default function Home() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setData(data.pilotes);
+        setData(data);
       });
   }, []);
 
